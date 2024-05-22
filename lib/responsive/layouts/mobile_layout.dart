@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_design_app/components/my_box.dart';
 import 'package:flutter_responsive_design_app/components/my_drawer.dart';
+import 'package:flutter_responsive_design_app/components/my_tile.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
@@ -27,7 +27,13 @@ class MobileLayout extends StatelessWidget {
                 itemBuilder: (context, index) => const MyBox(),
               ),
             ),
-          )
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 6,
+              itemBuilder: (context, index) => const MyTile(),
+            ),
+          ),
         ],
       ),
     );
